@@ -1,0 +1,35 @@
+
+h1{
+	font-family: "Baskerville";
+	color: #F0F;
+	background-color: #000;
+	padding: 30px;
+}
+h2{
+	font-family: "Futura";
+	text-decoration: underline;
+}
+body{
+	background-color: #F0F;
+}
+p{
+	font-style: italic;
+}
+a{
+	font-style:normal;
+	color:#000;
+}
+a:hover{
+	color:purple;
+	background-color:#000;
+}
+h1{
+	color:#FF0;
+}
+#second-header{
+	background: #FF0;
+	color:#000;
+}
+#home-link{
+	background-color:#000;
+}
