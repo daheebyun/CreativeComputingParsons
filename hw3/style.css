@@ -1,0 +1,38 @@
+body{
+	background-color: #000; 
+	color: #fff;
+	font-family: "Garamond";
+	color:#808080;
+}
+h1{
+	text-align: center;
+	font-weight: bold;
+}
+a{
+	color:#808080; 
+	text-decoration: none; 
+	text-align: center;
+	font-size: 22px;
+}
+a:hover{
+	color:red;
+	text-shadow: 1px 1px 1px red;
+}
+img{
+	display:block; 
+	margin:0 auto;
+	opacity: 0.7
+}
+#boxshadow{
+		text-shadow: 1.8px 1.7px 1px #808080;
+		margin: 30px;
+		padding: 2px;
+}
+#ending_survive{
+	color:white;
+}
+#ending_die{
+	color:red;
+	text-shadow: 2px 2px 2px;
+	opacity: 3
+}
