@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	display: flex; 
+	align-items: center;
+	justify-content: center;
+}
+div{
+	background-color: red;
+	width: 80vmin;
+	height: 80vmin;
+}
+@keyframes turn{
+	25%{
+		transform: rotate(90deg);
+	}
+	50%{
+		transform: rotate(180deg);
+	}
+	75%{
+		transform: rotate(270deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+.anim{
+	animation: turn 6s infinite;
+}
+</style>
+</head>
+<body>
+<div class="anim"></div>
+</body>
+</html>
