@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #FFFFE0;
+}
+.circle1{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 15px;
+	opacity: 0.86;
+	background: #191970;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle2{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 165px;
+	opacity: 0.8;
+	background: #000080;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle3{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 315px;
+	opacity: 0.65;
+	background: #4682B4;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle4{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 465px;
+	opacity: 0.75;
+	background: #20B2AA;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle5{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 615px;
+	opacity: 0.8;
+	background: #FCFC64;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle6{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 765px;
+	opacity: 0.8;
+	background: #FFA500;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle7{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 915px;
+	opacity: 0.8;
+	background: #FF8C00;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+.circle8{
+	width: 200px; 
+	height: 200px;
+	position:absolute;
+	top: 250px;
+	left: 1065px;
+	opacity: 0.85;
+	background: #FF9EB5;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+@keyframes bounce{
+	50%{
+		transform: translate(0px, -120px);
+	}
+	100%{
+		transform: initial;
+	}
+}
+@keyframes scale{
+	50%{transform: scale(0.5,0.5);}
+	100%{transform: initial;}
+}
+@keyframes colorchange{
+	50% {background:#FF9EB5;}
+	100% {background: #191970;}
+}
+#anim{
+	animation: bounce 2s infinite;
+}
+.bounce1{
+	animation: bounce 4s infinite;
+}
+.bounce2{
+	animation: bounce 1.5s infinite;
+}
+.bounce3{
+	animation: bounce 3s infinite;
+}
+.scale1{
+	animation: scale 3s infinite;
+}
+.scale2{
+	animation: scale 6s infinite;
+}
+.scale3{
+	animation: scale 2.3s infinite;
+}
+.colorchange1{
+	animation: colorchange 3s infinite;
+}
+.circle2:hover{
+	background: #FF8C00;
+}
+.circle3:hover{
+	background: #FFA500;
+}
+.circle4:hover{
+	background: #FCFC64;
+}
+.circle5:hover{
+	background: #20B2AA;
+}
+.circle6:hover{
+	background: #4682B4;
+}
+.circle7:hover{
+	background: #000080;
+}
+.circle8:hover{
+	background: #191970;
+}
+</style>
+</head>
+<body>
+<div id="anim">
+	<div class="circle1 scale1 colorchange1"></div>
+	<div class="circle2 bounce1"></div>
+	<div class="circle3 bounce2"></div>
+	<div class="circle4 scale2"></div>
+	<div class="circle5 bounce1"></div>
+	<div class="circle6 bounce3"></div>
+	<div class="circle7 bounce1"></div>
+	<div class="circle8 scale3"></div>
+</div>
+</body>
+</html>
