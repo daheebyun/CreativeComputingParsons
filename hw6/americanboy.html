@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<style>
+	body{text-align: center; background: #000; color:#fff;}
+</style>
+<div id="result"></div>
+<script>
+	var result = document.getElementById('result');
+	var string = "Takemeonatrip,I'dliketogosomedayTakemetoNewYork,I'd lovetoseeLAIreallywanttocomekickitwithyouYou'llbemyAmerican boy,AmericanboyHesaidHeySisterIt'sreallyreallynicetomeetyaI justmetthis5foot7guyswho'sjustmytypeIliketheway he's speaking hisconfidenceispeakingDon'tlikehisbaggyjeansbutI'malikewhat's underneathitAndnoIain'tbeentoMIAIheardthatCalineverrainsandNew YorkheartawaitsFirstlet'sseethewestendI'llshowyoutomybredrins I'mlikethisAmerican boy,American boyTakemeonatrip,I'dliketo gosomedayTakemetoNewYork,I'dlovetoseeLAIreallywanttocomekickit withyouYou'llbemyAmericanboy,AmericanboyCanwegetawaythis weekendTakemetoBroadwayLet'sgoshoppingbabythenwe'llgotoacafe Let'sgoonthesubwayTakemetoyourhoodInevabeentoBrooklynandI'd liketoseewhat'sgoodDressinallyourfancyclothesSneaker's lookingFreshtoDefI'mlovin'thoseShellToesWalkin'thatwalk TalkthatslicktalkI'mlikin'thisAmericanBoy,AmericanboyTakemeona trip,I'dliketogosomedayTakemetoNewYork,I'dloveto seeLAIreallywanttocomekickitwithyouYou'llbemy Americanboy,AmericanboyWouldyoubemylove,myloveCould beminewouldyoubemylovemylove,couldbemineCouldyou bemylove,myloveWouldyoubemyAmericanboy,Americanboy  Takemeonatrip,I'dliketogosomedayTakemetoNewYork, I'dlovetoseeLAIreallywanttocomekickitwithyou You'llbemyAmericanboy,Americanboy"; 
+
+var dictionary = {};
+var ngrams = [];
+var ngramlength = 11; 
+
+for(var i = 0; i < string.length-ngramlength; i+=ngramlength){
+	var ngram = string.substring(i, i+ngramlength);
+	var next = string.substring(i+ngramlength, i+ngramlength*2);
+	if(dictionary[ngram] === undefined){
+		dictionary[ngram] = [];
+	}
+	dictionary[ngram].push(next);
+	ngrams.push(ngram);
+	//result.innerHTML += (ngrams + '<br>');
+}
+
+for(var j=0;j<=32;j++){
+	var random = Math.floor(Math.random()*ngrams.length);
+	result.innerHTML += (ngrams[random] + '<br>');
+}
+
+
+console.log(Math.floor(Math.random()*10));
+var startWord = ngrams[ Math.floor(Math.random()* ngramlength) ];
+
+var phrase = [startWord]; 
+
+var nextArray = dictionary[startWord];
+var nextWord = nextArray[Math.floor(Math.random()+nextArray.length) ];
+
+phrase.push(nextWord);
+
+
+result.innerHTML += phrase;
+
+</script>
+</body>
+</html>

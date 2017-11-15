@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+	var result = document.getElementById('result');
+	var string = "I.  SUCCESS.   Success is counted sweetest By those who ne'er succeed. To comprehend a nectar Requires sorest need.  Not one of all the purple host Who took the flag to-day Can tell the definition, So clear, of victory,  As he, defeated, dying, On whose forbidden ear The distant strains of triumph Break, agonized and clear!";
+
+var dictionary = {};
+var ngrams = [];
+var ngramlength = 6; 
+
+for(var i = 0; i < string.length-ngramlength; i+=ngramlength){
+	var ngram = string.substring(i, i+ngramlength);
+	var next = string.substring(i+ngramlength, i+ngramlength*2);
+	if(dictionary[ngram] === undefined){
+		dictionary[ngram] = [];
+	}
+	dictionary[ngram].push(next);
+	ngrams.push(ngram);
+	result.innerHTML += (ngrams + '<br>');
+}
+
+
+result.innerHTML += phrase;
+
+</script>
+</body>
+</html>

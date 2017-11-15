@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<div id="result"></div>
+<script>
+	var result = document.getElementById('result');
+	var string = "I.  SUCCESS.   Success is counted sweetest By those who ne'er succeed. To comprehend a nectar Requires sorest need.  Not one of all the purple host Who took the flag to-day Can tell the definition, So clear, of victory,  As he, defeated, dying, On whose forbidden ear The distant strains of triumph Break, agonized and clear!";
+
+var dictionary = {};
+var ngrams = [];
+var ngramlength = 6; 
+
+for(var i = 0; i < string.length-ngramlength; i+=ngramlength){
+	var ngram = string.substring(i, i+ngramlength);
+	var next = string.substring(i+ngramlength, i+ngramlength*2);
+	if(dictionary[ngram] === undefined){
+		dictionary[ngram] = [];
+	}
+	dictionary[ngram].push(next);
+	ngrams.push(ngram);
+	// result.innerHTML += (ngrams + '<br>');
+}
+console.log('dict: '+dictionary);
+console.log('ngram: '+ngram);
+console.log('ngrams: '+ngrams);
+
+for(var j=0;j<=15;j++){
+	var random = Math.floor(Math.random()*ngrams.length);
+	result.innerHTML += ngrams[random];
+}
+
+
+console.log(Math.floor(Math.random()*10));
+var startWord = ngrams[ Math.floor(Math.random()* ngramlength) ];
+
+var phrase = [startWord]; 
+
+var nextArray = dictionary[startWord];
+var nextWord = nextArray[Math.floor(Math.random()+nextArray.length) ];
+
+phrase.push(nextWord);
+
+// console.log('phrase'+phrase);
+
+result.innerHTML += phrase;
+
+</script>
+</body>
+</html>
